@@ -3,7 +3,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/BroYash/TodoBE">
-    <img src="Images/logo.png" alt="Logo" width="500" height="149">
+    <img src="images/logo.png" alt="Logo" width="500" height="149">
   </a>
 
 <h3 align="center">TodoBE</h3>
@@ -11,9 +11,9 @@
   <p align="center">
     <br />
     <a href="https://github.com/BroYash/TodoBE">View Demo</a>
-    ·
+    ï¿½
     <a href="https://github.com/BroYash/TodoBE/issues">Report Bug</a>
-    ·
+    ï¿½
     <a href="https://github.com/BroYash/TodoBE/issues">Request Feature</a>
   </p>
 </div>
