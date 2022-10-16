@@ -2,7 +2,7 @@
 
 using TodoBE.Application.Common.Interfaces;
 
-namespace ToboBE.API.Services;
+namespace TodoBE.API.Services;
 
 public class CurrentUserService : ICurrentUserService
 {

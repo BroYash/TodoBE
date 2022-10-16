@@ -1,10 +1,12 @@
 using TodoBE.Infrastructure.Persistence;
+using ToboBE.API;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddApplicationServices();
 builder.Services.AddInfrastructureServices(builder.Configuration);
+builder.Services.AddWebUIServices();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
@@ -14,7 +16,7 @@ if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
-    
+
     app.UseDeveloperExceptionPage();
     app.UseMigrationsEndPoint();
 
@@ -33,14 +35,18 @@ else
 }
 
 app.UseHttpsRedirection();
+app.UseStaticFiles();
+
+app.UseRouting();
 
 app.UseAuthentication();
-
 app.UseIdentityServer();
-
 app.UseAuthorization();
 
-app.MapControllers();
+app.MapControllerRoute(
+    name: "default",
+    pattern: "{controller}/{action=Index}/{id?}");
+
 
 app.Run();
 

@@ -2,7 +2,7 @@
 
 using Microsoft.AspNetCore.Mvc;
 
-namespace TodoBE.API.Controllers;
+namespace ToboBE.API.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
