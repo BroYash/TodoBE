@@ -1,10 +1,31 @@
-﻿namespace Domain.Entities;
+﻿namespace TodoBE.Domain.Entities;
 
 public class TodoItem : BaseAuditableEntity
 {
-    public long Id { get; set; }
-    public string Title { get; set; } = string.Empty;
-    public State State { get; set; }
-    public Location? Location { get; set; }
-    
+    public int ListId { get; set; }
+
+    public string? Title { get; set; }
+
+    public string? Note { get; set; }
+
+    public PriorityLevel Priority { get; set; }
+
+    public DateTime? Reminder { get; set; }
+
+    private bool _done;
+    public bool Done
+    {
+        get => _done;
+        set
+        {
+            if (value == true && _done == false)
+            {
+                AddDomainEvent(new TodoItemCompletedEvent(this));
+            }
+
+            _done = value;
+        }
+    }
+
+    public TodoList List { get; set; } = null!;
 }

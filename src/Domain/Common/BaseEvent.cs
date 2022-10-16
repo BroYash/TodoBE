@@ -1,6 +1,7 @@
-﻿namespace Domain.Common;
+﻿using MediatR;
 
-public class BaseEvent : BaseEntity
+namespace TodoBE.Domain.Common;
+
+public abstract class BaseEvent : INotification
 {
-    
 }

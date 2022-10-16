@@ -1,8 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity;
 
-namespace Infrastructure.Identity;
+namespace TodoBE.Infrastructure.Identity;
 
 public class ApplicationUser : IdentityUser
 {
-    
 }

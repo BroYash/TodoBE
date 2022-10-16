@@ -1,4 +1,4 @@
-﻿namespace Domain.Events;
+﻿namespace TodoBE.Domain.Events;
 
 public class TodoItemCreatedEvent : BaseEvent
 {
@@ -8,5 +8,4 @@ public class TodoItemCreatedEvent : BaseEvent
     }
 
     public TodoItem Item { get; }
-    
 }
