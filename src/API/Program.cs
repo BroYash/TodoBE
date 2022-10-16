@@ -1,12 +1,13 @@
 using TodoBE.Infrastructure.Persistence;
 using ToboBE.API;
+using TodoBE.API;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddApplicationServices();
 builder.Services.AddInfrastructureServices(builder.Configuration);
-builder.Services.AddWebUIServices();
+builder.Services.AddAPIServices();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
