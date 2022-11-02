@@ -4,5 +4,6 @@ public enum State
 {
     Todo = 0,
     Scheduled = 1,
-    Done = 2,
+    InProgress = 2,
+    Done = 3,
 }
